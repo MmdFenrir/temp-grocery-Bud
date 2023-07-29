@@ -5,6 +5,44 @@ Fonts
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
+@font-face {
+  font-family: "vazir";
+  font-style: normal;
+  font-weight: 100;
+  src: url("fonts/Vazir-Thin.eot");
+  src: url("fonts/Vazir-Thin.woff") format("woff"),
+    url("fonts/Vazir-Thin.ttf") format("ttf"),
+    url("fonts/Vazir-Thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "vazir";
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/Vazir-Light.eot");
+  src: url("fonts/Vazir-Light.woff") format("woff"),
+    url("fonts/Vazir-Light.ttf") format("ttf"),
+    url("fonts/Vazir-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "vazir";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Vazir-Regular.eot");
+  src: url("fonts/Vazir-Regular.woff") format("woff"),
+    url("fonts/Vazir-Regular.ttf") format("ttf"),
+    url("fonts/Vazir-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "vazir";
+  font-style: normal;
+  font-weight: 950;
+  src: url("fonts/Vazir-Black.eot");
+  src: url("fonts/Vazir-Black.woff") format("woff"),
+    url("fonts/Vazir-Black.ttf") format("ttf"),
+    url("fonts/Vazir-Black.woff2") format("woff2");
+}
+
 /*
 =============== 
 Variables
@@ -43,10 +81,10 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: "vazir", sans-serif;
+  --ff-secondary: "vazir", sans-serif;
   --transition: all 0.3s linear;
-  --spacing: 0.25rem;
+  --spacing: 0;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -201,6 +239,7 @@ Grocery List
   border-radius: 0.25rem;
   letter-spacing: var(--spacing);
   text-transform: capitalize;
+  font-family: var(--ff-primary);
 }
 .alert-danger {
   color: #721c24;
@@ -229,6 +268,7 @@ Grocery List
   font-size: 1rem;
   flex: 1 0 auto;
   color: var(--clr-grey-5);
+  font-family: var(--ff-secondary);
 }
 #grocery::placeholder {
   font-family: var(--ff-secondary);
@@ -249,6 +289,8 @@ Grocery List
   content: var(--clr-primary-5);
   transition: var(--transition);
   font-size: 0.85rem;
+  font-family: var(--ff-primary);
+  letter-spacing: var(--spacing);
 }
 .submit-btn:hover {
   background: var(--clr-primary-5);
@@ -285,6 +327,7 @@ Grocery List
   color: var(--clr-grey-1);
   letter-spacing: 2px;
   transition: var(--transition);
+  letter-spacing: var(--spacing);
 }
 .edit-btn,
 .delete-btn {
@@ -322,6 +365,8 @@ Grocery List
   cursor: pointer;
   transition: var(--transition);
   margin-top: 1.25rem;
+  font-family: var(--ff-primary);
+  font-weight: 600;
 }
 .clear-btn:hover {
   color: var(--clr-red-dark);

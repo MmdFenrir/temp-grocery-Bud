@@ -28,7 +28,7 @@ function addItem(e) {
   if (value && !editFlag) {
     createListItem(id, value);
     // display alert
-    displayAlert("item added to the list", "success");
+    displayAlert("اسم به لیست اضافه شد", "success");
     // show container
     container.classList.add("show-container");
     // add to local storage
@@ -37,12 +37,12 @@ function addItem(e) {
     setBackToDefault();
   } else if (value && editFlag) {
     editElement.innerHTML = value;
-    displayAlert("value changed", "success");
+    displayAlert("اسم ویرایش شد", "success");
     // edit local storage
     editLocalStorage(editID, value);
     setBackToDefault();
   } else {
-    displayAlert("pleas enter value", "danger");
+    displayAlert("لطفا داخل کادر اسم را وارد کنید", "danger");
   }
 }
 
@@ -67,7 +67,7 @@ function clearItems() {
   }
   container.classList.remove("show-container");
   setBackToDefault();
-  displayAlert("empty list", "danger");
+  displayAlert("لیست خالی شد", "danger");
   // remove from local storage
   localStorage.removeItem("list");
 }
@@ -79,7 +79,7 @@ function deleteItem(e) {
   if (list.children.length === 0) {
     container.classList.remove("show-container");
   }
-  displayAlert("item removed", "danger");
+  displayAlert("اسم حذف شد", "danger");
   setBackToDefault();
   // remove from local storage
   removeFromLocalStorage(id);
@@ -100,7 +100,7 @@ function setBackToDefault() {
   grocery.value = "";
   editFlag = false;
   editID = "";
-  submitBtn.textContent = "submit";
+  submitBtn.textContent = "ارسال";
 }
 // ****** LOCAL STORAGE **********
 function addToLocalStorage(id, value) {

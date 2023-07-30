@@ -93,7 +93,7 @@ function editItem(e) {
   grocery.value = editElement.innerHTML;
   editFlag = true;
   editID = element.dataset.id;
-  submitBtn.textContent = "edit";
+  submitBtn.textContent = "ویرایش";
 }
 // set back to default
 function setBackToDefault() {

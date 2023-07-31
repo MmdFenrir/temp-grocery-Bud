@@ -171,17 +171,3 @@ function createListItem(id, value) {
   // append child
   list.appendChild(element);
 }
-
-// **** add my SQL **** //
-import mysql from "mysql2/promise";
-
-const client = await mysql.createConnection({
-  host: "psedge.global",
-  port: parseInt(process.env.POLYSCALE_GROCERYBUD_PORT),
-  user: process.env.POLYSCALE_GROCERYBUD_USERNAME,
-  password: process.env.POLYSCALE_GROCERYBUD_PASSWORD,
-  database: process.env.POLYSCALE_GROCERYBUD_DATABASE,
-  ssl: {
-    rejectUnauthorized: true,
-  },
-});
